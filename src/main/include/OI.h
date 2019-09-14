@@ -15,10 +15,12 @@ using namespace frc;
 
 class OI {
  private:
-  Joystick* gameController;
+  Joystick* leftController;
+  Joystick *rightController;
   JoystickButton* armMoveUp;
   JoystickButton* armMoveDown;
  public:
-  Joystick* getGameController();
+  Joystick* getLeft();
+  Joystick* getRight();
   OI();
 };

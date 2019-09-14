@@ -10,13 +10,16 @@
 #include "ctre/Phoenix.h"
 #include "commands/MoveArm.h"
 
-OI::OI() : gameController(new Joystick(0)), armMoveUp(new JoystickButton(gameController, 5)), armMoveDown(new JoystickButton(gameController, 6))
+OI::OI() : leftController(new Joystick(0)), rightController(new Joystick(1)) //armMoveUp(new JoystickButton(, 5)), armMoveDown(new JoystickButton(gameController, 6))
 {
-  armMoveUp->WhileHeld(new MoveArm(-0.5));
-  armMoveDown->WhileHeld(new MoveArm(0.5));
+  //armMoveUp->WhileHeld(new MoveArm(-0.5));
+  //armMoveDown->WhileHeld(new MoveArm(0.5));
 
 }
 
-Joystick* OI::getGameController(){
-  return gameController;
+Joystick* OI::getLeft(){
+  return leftController;
+}
+Joystick* OI::getRight() {
+  return rightController;
 }

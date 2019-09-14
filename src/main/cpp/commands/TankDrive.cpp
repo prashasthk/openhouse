@@ -21,7 +21,7 @@ void TankDrive::Initialize() {}
 // Called repeatedly when this Command is scheduled to run
 void TankDrive::Execute() {
   std::cout<<"testing"<<std::endl;
-  Robot::m_drive->tankDrive(Robot::m_oi->getGameController()->GetY(), Robot::m_oi->getGameController()->GetRawAxis(3));
+  Robot::m_drive->tankDrive(Robot::m_oi->getLeft()->GetY(), Robot::m_oi->getRight()->GetY());
 }
 
 // Make this return true when this Command no longer needs to run execute()
